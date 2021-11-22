@@ -1,0 +1,80 @@
+<div class="container register">
+    <div class="row">
+
+        <div class="col-md-10 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist"></ul>
+            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <h3 class="register-heading">Creating Listing</h3>
+                <form action='manage-listing' method="post">
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Listing price " name="listPrice"
+                                    [(ngModel)]="booking.listingPrice" />
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="propertyType" [(ngModel)]="booking.propertyType">
+                                    <option class="hidden"> Property Type </option>
+                                    <option value="Individual">Individual</option>
+                                    <option value="Rented">Rented</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="address" class="form-control" placeholder="street address "
+                                    name="streetAddress" [(ngModel)]="booking.streetAddress" />
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-control" name="stateProvince" [(ngModel)]="booking.stateProvince">
+                                    <option class="hidden"> State / Province</option>
+                                    <option>Bihar</option>
+                                    <option>Jharkand</option>
+                                    <option>Odisha</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="ZIP / Postal Code: " name="zipCode"
+                                    [(ngModel)]="booking.zipCode" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Square footage "
+                                    name="squareFootage" [(ngModel)]="booking.squareFootage" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="address" class="form-control" placeholder="No. Of Bedrooms "
+                                    name="noOfBeedrooms" [(ngModel)]="booking.noOfBeedrooms" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="address" class="form-control" placeholder="No. Of Bathrooms "
+                                    name="noOfBathrooms" [(ngModel)]="booking.noOfBathrooms" />
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <a class="btn icon-btn btn-danger" href="#"><span
+                                        class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Select
+                                    Photo</a>&nbsp;&nbsp;
+                                <a class="btn icon-btn btn-primary" href="#"><span
+                                        class="glyphicon btn-glyphicon glyphicon-plus img-circle text-danger"></span>Upload
+                                    a new photo</a>
+                                <p></p>
+                                <p>
+                                    <!--<label class="col-sm-2" for="Description" name="description"  [(ngModel)]="booking.description">Description</label>-->
+
+                                    <textarea class="form-control description" id="description" name="Description"
+                                        [(ngModel)]="booking.description"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-success mt-5" (click)="saveList()">Save
+                                Listing</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

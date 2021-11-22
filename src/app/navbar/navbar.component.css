@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: cursive;
+    font-weight: 700;
+
+}
+
+nav.main-navigation {
+    position: relative;
+}
+
+nav.main-navigation ul.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+
+.nav-list li.nav-list-item {
+    display: inline-block;
+    line-height: 30px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+a.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: relative;
+    color:white;
+    background-color: rgb(26, 2, 2);
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.nav-list li {
+    animation: FadeIn 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-fill-mode: both;
+}
+
+.nav-list li:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.nav-list li:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.nav-list li:nth-child(3) {
+    animation-delay: .5s;
+}
+
+.nav-list li:nth-child(4) {
+    animation-delay: .7s;
+}
+
+.nav-list li:nth-child(5) {
+    animation-delay: .8s;
+}
+
+
